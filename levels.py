@@ -723,7 +723,7 @@ def solveLevel29(client: SSHClient, password = None) -> str:
                     sleep(1)
 
                     return getPassword(channel.recv(20000))
-                
+
 
 
 def solveLevel30(client: SSHClient, password = None) -> str:
@@ -754,6 +754,49 @@ def solveLevel30(client: SSHClient, password = None) -> str:
                     sleep(1)
 
                     channel.send(git_command)
+
+                    sleep(1)
+
+                    return getPassword(channel.recv(20000))
+
+
+
+def solveLevel31(client: SSHClient, password = None) -> str:
+    '''
+    Command Explanation:
+
+    The player must push the file key.txt
+    '''
+
+    command = 'tempDirectory=$(mktemp -d); cd $tempDirectory; GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -p 2220" git clone ssh://bandit31-git@localhost:2220/home/bandit31-git/repo\n'
+
+    git_command = 'cd repo; touch key.txt; echo "May I come in?" > key.txt; git add key.txt -f; git commit -m "commit"; git push\n'
+
+    channel = client.invoke_shell()
+
+    channel.send(f'{command}')
+
+    while True:
+            # Leer la salida del canal
+            if channel.recv_ready():
+                output = channel.recv(8000).decode('utf-8')
+                print(output)
+
+                # Buscar la solicitud de contraseña y enviarla
+                if "bandit31-git@localhost's password" in output.lower():
+                    channel.send(f'{password}\n')
+
+                    sleep(1)
+
+                    channel.send(git_command)
+
+                    sleep(1)
+
+                    channel.send("yes\n")
+
+                    sleep(1)
+
+                    channel.send(f'{password}\n')
 
                     sleep(1)
 
