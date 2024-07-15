@@ -1,0 +1,569 @@
+bandit1: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+bandit2: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+bandit3: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+bandit4: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+bandit5: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+bandit6: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+bandit7: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+bandit8: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+bandit9: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+bandit10: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+bandit11: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+bandit12: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+bandit13: FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+bandit14: ssh -i sshkey.private bandit14@localhost -p 2220   MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+bandit15: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+bandit16: kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+bandit17:
+bandit18: x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+bandit19: cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+bandit20: 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+bandit21: EeoULMCra2q0dSkYj561DX7s1CpBuOBt
+bandit22: tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
+bandit23: 0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
+bandit24: gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
+bandit25: iCi86ttT4KSNe1armKiwbQNmB3YJP3q4
+bandit26: s0773xxkk0MXfdqOfPRVr9L3jJBUOgCZ
+bandit27: upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB
+bandit28: Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
+bandit29: 4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7
+bandit30: qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL
+bandit31: fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy
+bandit32: 3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
+bandit33: tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0
+
+
+
+
+
+
+
+
+
+
+
+bandit1@bandit:~$ cat ./-
+263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+bandit2@bandit:~$ cat spaces\ in\ this\ filename
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+bandit5@bandit:~/inhere$ find . -type f -size 1033c ! -executable
+./maybehere07/.file2
+
+bandit6@bandit:~$ find / -type f -size 33c -user bandit7 -group bandit6 2>/dev/null
+/var/lib/dpkg/info/bandit7.password
+
+bandit7@bandit:~$ grep millionth data.txt
+millionth       dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+bandit8@bandit:~$ sort data.txt | uniq -u
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+bandit9@bandit:~$ strings data.txt | grep "="
+[========== the
+EJ}@k=
+T%========== passwordG
+\       =f7
+}========== ist"
+WL[L=S
+)|P=Vz
+=Y`W^
+=9|
+s7.=;$
+g=6E
+| =?y=
+========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+=n/iZ
+:'=F
+
+bandit10@bandit:~$ base64 -d data.txt
+The password is dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+bandit11@bandit:~$ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+The password is 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+
+bandit12:
+ xxd -r data.txt >> data.gz
+ gzip -d
+ bzip2 -d data
+ tar -xvf data6.tar
+
+
+
+bandit14@bandit:/etc/bandit_pass$ nc localhost 30000
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+Correct!
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+
+bandit15@bandit:~$ openssl s_client -connect localhost:30001 -ign_eof
+read R BLOCK
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+Correct!
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+
+closed
+
+
+bandit16@bandit:~$ nmap -p31000-32000 localhost
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-07-05 14:06 UTC
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00020s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT      STATE SERVICE
+31046/tcp open  unknown
+31518/tcp open  unknown
+31691/tcp open  unknown
+31790/tcp open  unknown
+31960/tcp open  unknown
+
+bandit16@bandit:~$ nmap -p31000-32000 localhost -sCV
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-07-05 14:08 UTC
+Stats: 0:01:35 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 80.00% done; ETC: 14:10 (0:00:24 remaining)
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00012s latency).
+Not shown: 996 closed tcp ports (conn-refused)
+PORT      STATE SERVICE     VERSION
+31046/tcp open  echo
+31518/tcp open  ssl/echo
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=SnakeOil
+| Not valid before: 2024-06-10T03:59:50
+|_Not valid after:  2034-06-08T03:59:50
+31691/tcp open  echo
+31790/tcp open  ssl/unknown
+| ssl-cert: Subject: commonName=SnakeOil
+| Not valid before: 2024-06-10T03:59:50
+|_Not valid after:  2034-06-08T03:59:50
+|_ssl-date: TLS randomness does not represent time
+| fingerprint-strings:
+|   FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, LPDString, RTSPRequest, SIPOptions:
+|_    Wrong! Please enter the correct current password.
+31960/tcp open  echo
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port31790-TCP:V=7.94SVN%T=SSL%I=7%D=7/5%Time=6687FE85%P=x86_64-pc-linux
+SF:-gnu%r(GenericLines,32,"Wrong!\x20Please\x20enter\x20the\x20correct\x20
+SF:current\x20password\.\n")%r(GetRequest,32,"Wrong!\x20Please\x20enter\x2
+SF:0the\x20correct\x20current\x20password\.\n")%r(HTTPOptions,32,"Wrong!\x
+SF:20Please\x20enter\x20the\x20correct\x20current\x20password\.\n")%r(RTSP
+SF:Request,32,"Wrong!\x20Please\x20enter\x20the\x20correct\x20current\x20p
+SF:assword\.\n")%r(Help,32,"Wrong!\x20Please\x20enter\x20the\x20correct\x2
+SF:0current\x20password\.\n")%r(FourOhFourRequest,32,"Wrong!\x20Please\x20
+SF:enter\x20the\x20correct\x20current\x20password\.\n")%r(LPDString,32,"Wr
+SF:ong!\x20Please\x20enter\x20the\x20correct\x20current\x20password\.\n")%
+SF:r(SIPOptions,32,"Wrong!\x20Please\x20enter\x20the\x20correct\x20current
+SF:\x20password\.\n");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 156.97 seconds
+
+
+bandit16@bandit:~$ openssl s_client -connect localhost:31790 -ign_eof
+
+
+bandit17@bandit:~$ diff passwords.old passwords.new
+42c42
+< FtePUTiLiwPzjIFw2T7o57oBS4zUvPpg
+---
+> x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+
+
+C:\Users\marco>ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+bandit18@bandit.labs.overthewire.org's password:
+cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8
+
+
+bandit19@bandit:~$ ./bandit20-do cat /etc/bandit_pass/bandit20
+0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+
+
+Primera terminal:
+bandit20@bandit:~$ echo "0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO" >> /tmp/test3
+bandit20@bandit:~$ nc -nlvp 65000 < /tmp/test3
+Segunda Terminal
+bandit20@bandit:~$ ./suconnect 65000
+Read: 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
+Password matches, sending next password
+Primera Terminal
+bandit20@bandit:~$ nc -nlvp 65000 < /tmp/test3
+Listening on 0.0.0.0 65000
+Connection received on 127.0.0.1 52812
+EeoULMCra2q0dSkYj561DX7s1CpBuOBt
+
+
+bandit22@bandit:~$ echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+8ca319486bfbbc3663ea0fbe81326349
+bandit22@bandit:~$ cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
+
+bandit23@bandit:~$ echo "cat /etc/bandit_pass/bandit24 >> /tmp/bandit24" >> /var/spool/bandit24/foo/test24.sh
+bandit23@bandit:~$ cat /tmp/bandit24
+gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
+
+bandit23@bandit:~$ nano /var/spool/bandit24/foo/script.sh; chmod 777 /var/spool/bandit24/foo/script.sh
+#!/bin/bash
+
+cat /etc/bandit_pass/bandit24 >> /tmp/raxoconsopa
+
+bandit23@bandit:~$ cat /tmp/raxoconsopa
+gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
+
+
+bandit24
+
+
+ #!/bin/bash
+
+password="gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8"
+
+for i in {0..9}{0..9}{0..9}{0..9}
+do
+        echo $password' '$i >> /tmp/combinations.txt
+done
+
+cat /tmp/combinations.txt >> nc localhost 30002 > /tmp/re2.txt
+
+
+bandit25:
+ Hacer la ventana enana
+ Darle a la v para entrar en vim
+ :set /bin/bash
+ :shell
+
+
+bandit26@bandit:~$ ./bandit27-do cat /etc/bandit_pass/bandit27
+upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB
+
+
+bandit27@bandit:/tmp/raxo2$ git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
+Cloning into 'repo'...
+The authenticity of host '[localhost]:2220 ([127.0.0.1]:2220)' can't be established.
+ED25519 key fingerprint is SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Could not create directory '/home/bandit27/.ssh' (Permission denied).
+Failed to add the host to the list of known hosts (/home/bandit27/.ssh/known_hosts).
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+bandit27-git@localhost's password:
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+bandit27@bandit:/tmp/raxo2/repo$ ls -al
+total 16
+drwxrwxr-x 3 bandit27 bandit27 4096 Jul  8 15:11 .
+drwxrwxr-x 3 bandit27 bandit27 4096 Jul  8 15:11 ..
+drwxrwxr-x 8 bandit27 bandit27 4096 Jul  8 15:11 .git
+-rw-rw-r-- 1 bandit27 bandit27   68 Jul  8 15:11 README
+bandit27@bandit:/tmp/raxo2/repo$ cat README
+The password to the next level is: Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
+
+bandit28@bandit:/tmp/raxo3/repo3$ git log
+commit ad9a337071c5e3d4509559d36128b38a0e5571f1 (HEAD -> master, origin/master, origin/HEAD)
+Author: Morla Porla <morla@overthewire.org>
+Date:   Thu Jun 20 04:07:12 2024 +0000
+
+    fix info leak
+
+commit 229f6001e1ff407bb935b82a94c6749e41a0693e
+Author: Morla Porla <morla@overthewire.org>
+Date:   Thu Jun 20 04:07:12 2024 +0000
+
+    add missing data
+
+commit ea882192c25642e69627b13179f9fb98f409ed5d
+Author: Ben Dover <noone@overthewire.org>
+Date:   Thu Jun 20 04:07:12 2024 +0000
+
+    initial commit of README.md
+bandit28@bandit:/tmp/raxo3/repo3$ git checkout 229f6001e1ff407bb935b82a94c6749e41a0693e
+Note: switching to '229f6001e1ff407bb935b82a94c6749e41a0693e'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 229f600 add missing data
+bandit28@bandit:/tmp/raxo3/repo3$ ls
+README.md
+bandit28@bandit:/tmp/raxo3/repo3$ cat README.md
+# Bandit Notes
+Some notes for level29 of bandit.
+
+## credentials
+
+- username: bandit29
+- password: 4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7
+
+
+
+
+
+
+bandit29@bandit:/tmp/raxo4/repo$ cat README.md
+# Bandit Notes
+Some notes for bandit30 of bandit.
+
+## credentials
+
+- username: bandit30
+- password: <no passwords in production!>
+
+bandit29@bandit:/tmp/raxo4/repo$ git branch
+* master
+bandit29@bandit:/tmp/raxo4/repo$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/dev
+  remotes/origin/master
+  remotes/origin/sploits-dev
+bandit29@bandit:/tmp/raxo4/repo$ git branch -r
+  origin/HEAD -> origin/master
+  origin/dev
+  origin/master
+  origin/sploits-dev
+bandit29@bandit:/tmp/raxo4/repo$ git checkout origin/
+origin/dev           origin/HEAD          origin/master        origin/sploits-dev
+bandit29@bandit:/tmp/raxo4/repo$ git checkout origin/
+origin/dev           origin/HEAD          origin/master        origin/sploits-dev
+bandit29@bandit:/tmp/raxo4/repo$ git checkout origin/spoils-dev
+error: pathspec 'origin/spoils-dev' did not match any file(s) known to git
+bandit29@bandit:/tmp/raxo4/repo$ git checkout remotes/origin/dev
+Note: switching to 'remotes/origin/dev'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 196330c add data needed for development
+bandit29@bandit:/tmp/raxo4/repo$ git log
+commit 196330cb19cb783552d999864c06a9b81a4e60e8 (HEAD, origin/dev)
+Author: Morla Porla <morla@overthewire.org>
+Date:   Thu Jun 20 04:07:14 2024 +0000
+
+    add data needed for development
+
+commit 1f3fff853b240c291986d0a6b8c885a90e56322a
+Author: Ben Dover <noone@overthewire.org>
+Date:   Thu Jun 20 04:07:14 2024 +0000
+
+    add gif2ascii
+
+commit a442ed81c95fac132590fdd218bd7b831db81fe4 (origin/master, origin/HEAD, master)
+Author: Ben Dover <noone@overthewire.org>
+Date:   Thu Jun 20 04:07:14 2024 +0000
+
+    fix username
+
+commit 046a4d27b46af8f02879c890972d7f125f3ab824
+Author: Ben Dover <noone@overthewire.org>
+Date:   Thu Jun 20 04:07:14 2024 +0000
+
+    initial commit of README.md
+bandit29@bandit:/tmp/raxo4/repo$ ls
+code  README.md
+bandit29@bandit:/tmp/raxo4/repo$ cat README.md
+# Bandit Notes
+Some notes for bandit30 of bandit.
+
+## credentials
+
+- username: bandit30
+- password: qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL
+
+
+
+
+
+bandit30@bandit:/tmp/raxo5/repo$ git tag
+secret
+bandit30@bandit:/tmp/raxo5/repo$ git show secret
+fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy
+
+
+
+
+
+bandit31@bandit:/tmp/raxo6/repo$ git add -f key.txt
+bandit31@bandit:/tmp/raxo6/repo$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   key.txt
+
+bandit31@bandit:/tmp/raxo6/repo$ git commit -a
+Unable to create directory /home/bandit31/.local/share/nano/: No such file or directory
+It is required for saving/loading search history or cursor positions.
+
+Aborting commit due to empty commit message.
+Aborting commit due to empty commit message.
+bandit31@bandit:/tmp/raxo6/repo$ git push -u origin master
+The authenticity of host '[localhost]:2220 ([127.0.0.1]:2220)' can't be established.
+ED25519 key fingerprint is SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Could not create directory '/home/bandit31/.ssh' (Permission denied).
+Failed to add the host to the list of known hosts (/home/bandit31/.ssh/known_hosts).
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+bandit31-git@localhost's password:
+branch 'master' set up to track 'origin/master'.
+Everything up-to-date
+bandit31@bandit:/tmp/raxo6/repo$ ls
+key.txt  README.md
+bandit31@bandit:/tmp/raxo6/repo$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   key.txt
+
+bandit31@bandit:/tmp/raxo6/repo$ git commit -a
+Unable to create directory /home/bandit31/.local/share/nano/: No such file or directory
+It is required for saving/loading search history or cursor positions.
+
+Aborting commit due to empty commit message.
+bandit31@bandit:/tmp/raxo6/repo$ git commit -a
+Unable to create directory /home/bandit31/.local/share/nano/: No such file or directory
+It is required for saving/loading search history or cursor positions.
+
+
+Unable to create directory /home/bandit31/.local/share/nano/: No such file or directory
+It is required for saving/loading search history or cursor positions.
+
+
+Unable to create directory /home/bandit31/.local/share/nano/: No such file or directory
+It is required for saving/loading search history or cursor positions.
+
+Aborting commit due to empty commit message.
+bandit31@bandit:/tmp/raxo6/repo$ git commit -a "prueba"
+fatal: paths 'prueba ...' with -a does not make sense
+bandit31@bandit:/tmp/raxo6/repo$ git commit -a
+Unable to create directory /home/bandit31/.local/share/nano/: No such file or directory
+It is required for saving/loading search history or cursor positions.
+
+[master b7b92c3] test
+ 1 file changed, 1 insertion(+)
+ create mode 100644 key.txt
+bandit31@bandit:/tmp/raxo6/repo$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+bandit31@bandit:/tmp/raxo6/repo$ git push -u origin master
+The authenticity of host '[localhost]:2220 ([127.0.0.1]:2220)' can't be established.
+ED25519 key fingerprint is SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Could not create directory '/home/bandit31/.ssh' (Permission denied).
+Failed to add the host to the list of known hosts (/home/bandit31/.ssh/known_hosts).
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+bandit31-git@localhost's password:
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 318 bytes | 318.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: ### Attempting to validate files... ####
+remote:
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+remote:
+remote: Well done! Here is the password for the next level:
+remote: 3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
+remote:
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+remote:
+To ssh://localhost:2220/home/bandit31-git/repo
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'ssh://localhost:2220/home/bandit31-git/repo'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
