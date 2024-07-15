@@ -801,3 +801,25 @@ def solveLevel31(client: SSHClient, password = None) -> str:
                     sleep(1)
 
                     return getPassword(channel.recv(20000))
+
+
+
+def solveLevel32(client: SSHClient, password = None) -> str:
+    '''
+    Command Explanation:
+
+    Escaping from a shell. This is a hard one. Why do you need this one...?
+    '''
+
+    command = '$0; cat /etc/bandit_pass/bandit33\n'
+
+    stdin, stdout, stderr = client.exec_command(command)
+
+    password = getPassword(stdout.read())
+
+    # Because they are file objects, they need to be closed
+    stdin.close()
+    stdout.close()
+    stderr.close()
+
+    return password
