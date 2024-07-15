@@ -696,7 +696,6 @@ def solveLevel29(client: SSHClient, password = None) -> str:
     Command Explanation:
 
     The password is not published on the actual branch. The player must change into development branch (dev).
-    4pT1t5DENaYuqnqvadYs1oE4QLCdjmJ7
     '''
 
     command = 'tempDirectory=$(mktemp -d); cd $tempDirectory; GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -p 2220" git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo\n'
@@ -715,6 +714,41 @@ def solveLevel29(client: SSHClient, password = None) -> str:
 
                 # Buscar la solicitud de contraseña y enviarla
                 if "bandit29-git@localhost's password" in output.lower():
+                    channel.send(f'{password}\n')
+
+                    sleep(1)
+
+                    channel.send(git_command)
+
+                    sleep(1)
+
+                    return getPassword(channel.recv(20000))
+                
+
+
+def solveLevel30(client: SSHClient, password = None) -> str:
+    '''
+    Command Explanation:
+
+    The password is stored on a tag.
+    '''
+
+    command = 'tempDirectory=$(mktemp -d); cd $tempDirectory; GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -p 2220" git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo\n'
+
+    git_command = "cd repo; git show $(git tag)\n"
+
+    channel = client.invoke_shell()
+
+    channel.send(f'{command}')
+
+    while True:
+            # Leer la salida del canal
+            if channel.recv_ready():
+                output = channel.recv(8000).decode('utf-8')
+                print(output)
+
+                # Buscar la solicitud de contraseña y enviarla
+                if "bandit30-git@localhost's password" in output.lower():
                     channel.send(f'{password}\n')
 
                     sleep(1)
